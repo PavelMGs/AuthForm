@@ -56,6 +56,7 @@ const Form = () => {
                     onChange={e => setEmail(e.target.value)}
                     className={s.input}
                     placeholder='Email'
+                    required
                 />
                 <input
                     type="password"
@@ -63,6 +64,7 @@ const Form = () => {
                     onChange={e => setPassword(e.target.value)}
                     className={s.input}
                     placeholder='Password'
+                    required
                 />
                 <a href="">Forgot password?</a>
                 <div className={s.check}>
