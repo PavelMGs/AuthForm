@@ -157,6 +157,38 @@
         font-size: 16px;
         color: #929BAD;
     }
+
+    outline: none;
+}
+
+.wrong_email {
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        content: 'Not valid email';
+        color: #E1485B;
+        font-size: 12px;
+    }
+     & > input {
+        border-color: #E1485B;
+     }
+}
+
+.wrong_password {
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        content: 'Password must be at least 8 characters';
+        color: #E1485B;
+        font-size: 12px;
+    }
+     & > input {
+        border-color: #E1485B;
+     }
 }
 
 .check {

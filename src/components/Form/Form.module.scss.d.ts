@@ -10,6 +10,8 @@ interface CssExports {
   'submit': string;
   'with_google': string;
   'with_microsoft': string;
+  'wrong_email': string;
+  'wrong_password': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
