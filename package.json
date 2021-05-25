@@ -1,0 +1,43 @@
+{
+  "name": "authform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve",
+    "build:dev": "cross-env NODE_ENV=development webpack webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelMGs/AuthForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelMGs/AuthForm/issues"
+  },
+  "homepage": "https://github.com/PavelMGs/AuthForm#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.7",
+    "@types/react-dom": "^17.0.5",
+    "css-loader": "^5.2.6",
+    "css-modules-typescript-loader": "^4.0.1",
+    "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^11.1.1",
+    "scss-loader": "0.0.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.2",
+    "tsc": "^2.0.3",
+    "typescript-plugin-css-modules": "^3.2.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.4"
+  }
+}
