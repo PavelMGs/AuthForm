@@ -7,6 +7,10 @@ const Form = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [remember, setRemember] = useState(true);
+    const [canFocus, setCanFocus] = useState(true);
+
+    const emailRef = React.createRef<HTMLInputElement>();
+    const passRef = React.createRef<HTMLInputElement>();
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
@@ -16,10 +20,27 @@ const Form = () => {
             password
         }
 
-        console.log('send to server', data)
-
         if (remember) {
             localStorage.setItem('user', JSON.stringify(data));
+        }
+    }
+
+    const handleInvelid = (e: any) => {
+        e.preventDefault();
+        console.log(e.target.name)
+        const name = e.target.name
+        console.log();
+
+        if (name == "email") {
+            emailRef.current ? emailRef.current.focus() : null;
+            setCanFocus(false)
+            setTimeout(() => setCanFocus(true), 0);
+        } else if (name == "password") {
+            canFocus
+            ? passRef.current
+                ? passRef.current.focus()
+                : console.log('loh')
+            : null
         }
     }
 
@@ -48,19 +69,26 @@ const Form = () => {
             </div>
             <form
                 onSubmit={handleSubmit}
+                onInvalid={handleInvelid}
+                
                 className={s.form}
             >
                 <input
                     type="email"
                     value={email}
+                    name='email'
+                    ref={emailRef}
                     onChange={e => setEmail(e.target.value)}
                     className={s.input}
                     placeholder='Email'
+                    pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
                     required
                 />
                 <input
                     type="password"
                     value={password}
+                    name="password"
+                    ref={passRef}
                     onChange={e => setPassword(e.target.value)}
                     className={s.input}
                     placeholder='Password'
