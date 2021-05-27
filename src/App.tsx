@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './App.module.scss';
-import Form from './components/Form/Form';
+import LogIn from './components/LogIn/LogIn';
 
 const App = () => {
     return (
         <div className={s.root}>
-            <Form />
+            <LogIn />
         </div>
     )
 }

@@ -2,15 +2,12 @@
 // Please do not change this file!
 interface CssExports {
   'check': string;
+  'empty_input': string;
   'form': string;
   'input': string;
-  'new_user': string;
-  'or': string;
-  'root': string;
   'submit': string;
-  'with_google': string;
-  'with_microsoft': string;
   'wrong_email': string;
+  'wrong_input': string;
   'wrong_password': string;
 }
 export const cssExports: CssExports;
