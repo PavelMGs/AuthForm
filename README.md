@@ -1,5 +1,5 @@
 # AuthForm
-Comands-list:
+Comand list:
 
 start - npm start
 
